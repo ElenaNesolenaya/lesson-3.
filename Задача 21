@@ -1,0 +1,27 @@
+//  Задача 21
+//Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+// A (3,6,8); B (2,1,-7), -> 15.84
+// A (7,-5, 0); B (1,-1,9) -> 11.53
+
+Console.WriteLine("Введите координату J первой точки"); 
+int J1 = Convert.ToInt32(Console.ReadLine()); 
+Console.WriteLine("Введите координату K первой точки"); 
+int K1 = Convert.ToInt32(Console.ReadLine()); 
+Console.WriteLine("Введите координату L первой точки"); 
+int L1 = Convert.ToInt32(Console.ReadLine()); 
+Console.WriteLine("Введите координату J второй точки"); 
+int J2 = Convert.ToInt32(Console.ReadLine()); 
+Console.WriteLine("Введите координату K второй точки"); 
+int K2 = Convert.ToInt32(Console.ReadLine()); 
+Console.WriteLine("Введите координату L второй точки"); 
+int L2 = Convert.ToInt32(Console.ReadLine()); 
+Console.WriteLine(Dist(J1, K1, L1, J2, K2, L2)); 
+
+// double Dist = Math.Sqrt(Math.Pow((J2 - J1), 2) + Math.Pow((K2 - K1), 2) + Math.Pow((L2 - L1), 2)); 
+// Console.WriteLine($"Расстояние равно {Dist}"); 
+ 
+double Dist(int J1, int K1, int L1, int J2, int K2, int L2) 
+{ 
+    double D = Math.Sqrt(Math.Pow((J2 - J1), 2) + Math.Pow((K2 - K1), 2) + Math.Pow((L2 - L1), 2)); 
+    return D; 
+}
